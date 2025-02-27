@@ -1,4 +1,4 @@
-package Pertemuan2;
+package Pertemuan02;
 
 public class MataKuliah02 {
     String kodeMK;

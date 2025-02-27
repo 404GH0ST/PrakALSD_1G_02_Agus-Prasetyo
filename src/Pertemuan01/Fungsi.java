@@ -1,4 +1,4 @@
-package Pertemuan1;
+package Pertemuan01;
 
 public class Fungsi {
 

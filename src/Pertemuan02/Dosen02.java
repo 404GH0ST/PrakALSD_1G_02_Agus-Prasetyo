@@ -1,4 +1,4 @@
-package Pertemuan2;
+package Pertemuan02;
 
 public class Dosen02 {
     String idDosen;
