@@ -26,9 +26,8 @@ public class BioskopDemo02 {
                     continue;
                 }
                 if (bioskop_bioskop[nomorBioskop - 1] == null) {
-                    Bioskop02 bioskop1 = new Bioskop02();
+                    bioskop_bioskop[nomorBioskop - 1] = new Bioskop02();
                 }
-                bioskop_bioskop[nomorBioskop - 1] = new Bioskop02();
                 bioskopTerpilih = bioskop_bioskop[nomorBioskop - 1];
                 System.out.println("===========================================");
             } else if (pilihan == 2) {
