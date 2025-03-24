@@ -6,7 +6,9 @@ public class MahasiswaDemo02 {
     public static void main(String[] args) {
         MahasiswaBerprestasi02 list = new MahasiswaBerprestasi02();
         Scanner sc = new Scanner(System.in);
-        int jmlMhs = 5;
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jmlMhs = sc.nextInt();
+        sc.nextLine();
         for (int i = 0; i < jmlMhs; i++) {
             System.out.println("Masukkan Data mahasiswa ke-" + (1 + i));
             System.out.print("NIM       : ");
@@ -24,6 +26,20 @@ public class MahasiswaDemo02 {
 
         list.tampil();
         // melakukan pencarian data sequential
+        // System.out.println("--------------------------------------------------------------");
+        // System.out.println("Pencarian data");
+        // System.out.println("--------------------------------------------------------------");
+        // System.out.println("masukkan ipk mahasiswa yang dicari: ");
+        // System.out.print("IPK: ");
+        // double cari = sc.nextDouble();
+
+        // System.out.println("menggunakan sequential searching");
+        // double posisi = list.sequentialSearching(cari);
+        // int pss = (int) posisi;
+        // list.tampilPosisi(cari, pss);
+        // list.tampilDataSearch(cari, pss);
+
+        // melakukan pencarian data Binary
         System.out.println("--------------------------------------------------------------");
         System.out.println("Pencarian data");
         System.out.println("--------------------------------------------------------------");
@@ -31,10 +47,10 @@ public class MahasiswaDemo02 {
         System.out.print("IPK: ");
         double cari = sc.nextDouble();
 
-        System.out.println("menggunakan sequential searching");
-        double posisi = list.sequentialSearching(cari);
-        int pss = (int) posisi;
-        list.tampilPosisi(posisi, pss);
-        list.tampilDataSearch(posisi, pss);
+        System.out.println("menggunakan binary search");
+        double posisi2 = list.findBinarySearch(cari, 0, jmlMhs - 1);
+        int pss2 = (int) posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
     }
 }
