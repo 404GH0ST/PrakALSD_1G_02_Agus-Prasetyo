@@ -1,31 +1,32 @@
 package Pertemuan12;
 
-import java.util.Scanner;
-
 public class SLLMain02 {
     public static void main(String[] args) {
         SingleLinkedList02 sll = new SingleLinkedList02();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Jumlah mahasiswa: ");
-        int jumlah = sc.nextInt();
-        sc.nextLine();
-
-        for (int i = 0; i < jumlah; i++) {
-            System.out.println("Mahasiswa ke-" + (i + 1));
-            System.out.print("NIM: ");
-            String nim = sc.nextLine();
-            System.out.print("Nama: ");
-            String nama = sc.nextLine();
-            System.out.print("Kelas: ");
-            String kelas = sc.nextLine();
-            System.out.print("IPK: ");
-            double ipk = Double.parseDouble(sc.nextLine());
-            Mahasiswa02 mhs = new Mahasiswa02(nim, nama, kelas, ipk);
-            sll.addFirst(mhs);
-        }
+        Mahasiswa02 mhs1 = new Mahasiswa02("24212200", "Alvaro", "1A", 4.0);
+        Mahasiswa02 mhs2 = new Mahasiswa02("23212201", "Bimon", "2B", 3.8);
+        Mahasiswa02 mhs3 = new Mahasiswa02("22212202", "Cintia", "3C", 3.5);
+        Mahasiswa02 mhs4 = new Mahasiswa02("21212203", "Dirga", "4D", 3.6);
 
         sll.print();
+        sll.addFirst(mhs4);
+        sll.print();
+        sll.addLast(mhs1);
+        sll.print();
+        sll.insertAfter("Dirga", mhs3);
+        sll.insertAt(2, mhs2);
+        sll.print();
 
-        sc.close();
+        System.out.println("data index 1 : ");
+        sll.getData(1);
+
+        System.out.println("data mahasiswa an Bimon berada pada index : " + sll.indexOf("bimon"));
+        System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.remoteAt(0);
+        sll.print();
     }
 }
